@@ -9,8 +9,6 @@ urlpatterns = [
     path("afterlogin", views.afterlogin_view, name="afterlogin"),
     path("logout", LogoutView.as_view(template_name="ecom/logout.html"), name="logout"),
     path("search", views.search_view, name="search"),
-    path("send-feedback", views.send_feedback_view, name="send-feedback"),
-    path("view-feedback", views.view_feedback_view, name="view-feedback"),
     path("adminclick", views.adminclick_view),
     path(
         "adminlogin",
@@ -42,14 +40,8 @@ urlpatterns = [
     ),
     path("customer-home", views.customer_home_view, name="customer-home"),
     path("my-order", views.my_order_view, name="my-order"),
-    # path('my-order', views.my_order_view2,name='my-order'),
     path("my-profile", views.my_profile_view, name="my-profile"),
     path("edit-profile", views.edit_profile_view, name="edit-profile"),
-    path(
-        "download-invoice/<int:orderID>/<int:productID>",
-        views.download_invoice_view,
-        name="download-invoice",
-    ),
     path("add-to-cart/<int:pk>", views.add_to_cart_view, name="add-to-cart"),
     path("cart", views.cart_view, name="cart"),
     path(
